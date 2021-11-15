@@ -1,0 +1,7 @@
+click==8.0.1
+Flask==2.0.1
+-e git+https://github.com/danielvanhoang/flask-realworld.git@9716f06a19565a96b0025fd8bee9ab98ff79078d#egg=flaskr
+itsdangerous==2.0.1
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+Werkzeug==2.0.1

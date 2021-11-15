@@ -1,0 +1,26 @@
+#Drone CI File!!!
+
+kind: pipeline
+name: default
+
+steps:
+
+- name: build
+  image: python:3.8-slim-buster
+  commands:
+    - "pip install -r requirements.txt"
+    - "pip install --editable ."
+    - "pip install honeycomb-beeline"
+    - "apt update"
+
+- name: publish
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: dhpup/realworld
+    auto_tag: true
+    auto_tag_suffix: 1.0.56
+
