@@ -24,4 +24,4 @@ jobs:
       run: docker build . --file Dockerfile --tag dhpup/realworld:1.0.57
       
     - name: Docker Push
-      run: docker push dhpup/realworld
+      run: docker push dhpup/realworld:1.0.57
